@@ -1,0 +1,530 @@
+/* Body  */
+body {
+    height: 100vh;
+    background-color: rgba(244, 245, 220, 0.579);
+
+}
+
+/* 
+    Navigation bar 
+  .nav-link => navbar items 
+  .navbar-brand => Logo
+*/
+
+.nav-link,
+.navbar-brand {
+    color: white;
+}
+
+.nav-link:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.412);
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-family: 'Concert One', cursive;
+}
+
+.navbar-brand:hover {
+    scale: 1.02;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+#nav-bar::before {
+    background: url("nav-back.jpg") center;
+    background-size: cover;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+/* Top Container with BMI Chart & Calculator */
+#top-container {
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+}
+
+
+/* Chart CSS */
+
+
+/* BMI Chart container  */
+#instructions {
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    border: solid 2px black;
+    --bs-gutter-x: 0rem;
+    margin-top: 50px;
+    padding: 0;
+    width: 25%;
+    border-radius: 20px;
+    margin-left: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 5px 5px 30px black;
+}
+
+/* Background image CSS */
+#instructions::before {
+    background: url("chart-bg.jpg") center;
+    background-size: cover;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    border-radius: 20px;
+
+}
+
+/* Heading of Chart */
+#instructions h3 {
+    margin: 20px auto;
+}
+
+/* Table Content  */
+#chart-table {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+}
+
+/* Table heading 1st row */
+#heading {
+    background-color: rgb(176, 204, 255);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Cells of table  */
+td {
+    text-align: center;
+    border: solid 2px black;
+    padding: 8px 20px;
+}
+
+/* BMI Value color change */
+#under-weight {
+    background-color: rgba(251, 159, 159, 0.412);
+}
+
+#normal-weight {
+    background-color: rgb(71, 246, 71);
+}
+
+#over-weight {
+    background-color: rgb(255, 255, 144);
+}
+
+#obesity {
+    background-color: rgb(255, 182, 48);
+}
+
+#extreme-obesity {
+    background-color: rgba(255, 0, 0, 0.555);
+}
+
+
+
+
+/* Main container for BMI Calculator */
+
+#main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    width: fit-content;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 100px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px black;
+
+}
+
+/* Background CSS of Main Container  */
+#main-container::before {
+    background: url("form-back1.jpg") no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+
+/* Form for collecting data */
+
+#main-form {
+    margin-top: 50px;
+}
+
+/* Input methods */
+#height,
+#weight,
+#inches {
+    border: solid 2px black;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#inches {
+    display: none;
+}
+
+/* Calculate, feet and cm buttons */
+#btn-grp {
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+/* Calculate BMI button  */
+#calc-btn {
+    justify-self: flex-start;
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(177, 249, 193);
+    box-shadow: 0px 0px 20px 5px black;
+}
+
+#calc-btn:hover,
+.conversion-btn button:hover {
+    scale: 1.05;
+    box-shadow: 0px 0px 20px 5px white;
+}
+
+/* Feet & inches and Centimetres button  */
+.conversion-btn {
+    margin-left: 40px;
+    padding: 0;
+    height: fit-content;
+    justify-content: flex-end;
+}
+
+.conversion-btn button {
+    box-shadow: 0px 0px 20px 5px black;
+    margin: 10px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: rgb(251, 205, 255);
+    font-size: 0.9rem;
+}
+
+/* Result Display */
+p {
+    margin: 50px 0px;
+    font-size: 2.5rem;
+    align-self: center;
+    text-shadow: 5px 5px 5px black;
+
+}
+
+/* Span element for displaying BMI value  */
+#finalBMI {
+    height: 50px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration-color: white;
+    color: black;
+    font-family: 'Concert One', cursive;
+    width: 20%;
+    padding: 0px 10px;
+    border-radius: 20px;
+    border: solid 2px white;
+    box-shadow: 0px 0px 20px black;
+    background-color: white;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* Result Container  */
+#result {
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    display: flex;
+    color: white;
+}
+
+
+
+/* Footer Section  */
+
+#footer-section {
+    margin-top: 50px;
+}
+
+
+/* Social media icons */
+.social-media {
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+/* List of social media icons */
+ul {
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+/* Rights statement */
+#rights {
+    margin-left: 50px;
+}
+
+
+
+
+
+
+/* Media Queries  */
+
+
+/* For small laptop */
+@media(max-width:1025px) {
+
+    /* BMI Calculator Container  */
+    #main-container {
+        width: 50%;
+        margin: 0;
+        margin-top: 50px;
+        margin-left: 50px;
+
+    }
+
+    /* BMI Chart Container  */
+    #instructions {
+        width: 35%;
+    }
+}
+
+
+
+/* For Tablet */
+@media (max-width:769px) {
+
+    /* Navigation Bar  */
+    .nav-link:hover {
+        border-radius: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.412);
+    }
+
+    .nav-link {
+        padding-left: 10px;
+    }
+
+    /* Container having BMI Calculator & Chart  */
+    #top-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    /* Chart Container  */
+    #instructions {
+        width: auto;
+        padding: 0px 50px;
+        margin-left: 0;
+    }
+
+    /* BMI Calculator Container  */
+    #main-container {
+        width: auto;
+        margin: 50px auto;
+    }
+
+    /* Footer Section  */
+    #rights {
+        width: 50%;
+        margin-left: 20px;
+    }
+
+    ul {
+        margin-right: 20px;
+    }
+
+}
+
+
+/* For Large Mobiles */
+@media (max-width:426px) {
+
+    /* BMI Calculator Container  */
+    #main-container {
+        scale: 0.9;
+    }
+
+    /* Calculate BMI Button  */
+    #calc-btn {
+        font-size: 0.8rem;
+    }
+
+    .conversion-btn button {
+        font-size: 0.8rem;
+    }
+
+    /* Chart table  */
+    #chart-table {
+        font-size: 1rem;
+    }
+
+    /* BMI Chart  */
+    #instructions {
+        padding: 0 10px;
+    }
+
+    /* Footer Container  */
+    #rights {
+        width: auto;
+        margin-left: 0px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        justify-content: flex-start;
+        margin-right: 20px;
+    }
+
+
+}
+
+
+/* For medium size mobiles */
+@media (max-width: 376px) {
+
+    /* BMI Calculator Container  */
+    #main-container {
+        margin: 10px;
+    }
+
+    /* Chart table  */
+    #chart-table {
+        font-size: 0.8rem;
+    }
+
+    /* Chart Container  */
+    #instructions {
+        width: auto;
+        padding: 0px 10px;
+    }
+
+    /* Chart Heading  */
+    #instructions h3 {
+        font-size: 1rem;
+        padding: 0;
+        margin: 10px;
+    }
+
+    /* Calculate BMI button  */
+    #calc-btn {
+        font-size: 0.7rem;
+    }
+
+    /* All buttons group  */
+    #btn-grp {
+        margin-top: 20px;
+    }
+
+    /* Feet and Centimetres button  */
+    .conversion-btn {
+        margin-left: 20px;
+    }
+
+    .conversion-btn button {
+        font-size: 0.6rem;
+    }
+
+
+    /* Display result container  */
+    p {
+        font-size: 1.5rem;
+    }
+
+    #result {
+        height: 100px;
+    }
+
+    /* span element to display BMI value  */
+    #finalBMI {
+        width: 30%;
+    }
+
+    /* Form input methods */
+    #height,
+    #weight,
+    #inches {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* For small size mobiles */
+@media (max-width: 321px) {
+
+    /* Calculate BMI button  */
+    #calc-btn {
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+
+    /* All buttons group  */
+    #btn-grp {
+        --bs-gutter-x: 0rem;
+    }
+
+    /* Feet and Centimetres button  */
+    .conversion-btn {
+        margin-left: 10px;
+    }
+
+    .conversion-btn button {
+        font-size: 0.6rem;
+
+    }
+
+    /* Form input methods  */
+    #height,
+    #weight,
+    #inches {
+        font-size: 0.7rem;
+    }
+
+}
